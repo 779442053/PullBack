@@ -9,17 +9,20 @@
 
 #define kopenPullBack YES
 
-#if  kopenPullBack
-
-#import "UIViewController+BMBack.h"
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
 @implementation UIViewController (BMBack)
+
 + (void)load {
-    Method m1 = class_getInstanceMethod([self class], @selector(viewDidLoad));
-    Method m2 = class_getInstanceMethod([self class], @selector(bm_viewDidLoad));
-    method_exchangeImplementations(m1, m2);
+    
+    if (kopenPullBack) {
+        Method m1 = class_getInstanceMethod([self class], @selector(viewDidLoad));
+        Method m2 = class_getInstanceMethod([self class], @selector(bm_viewDidLoad));
+        method_exchangeImplementations(m1, m2);
+    }
 }
+
 - (void)bm_viewDidLoad {
     [self bm_viewDidLoad];
     if ([self isKindOfClass:[UINavigationController class]]) {
@@ -39,4 +42,3 @@
     }
 }
 @end
-#endif
