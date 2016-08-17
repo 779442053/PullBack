@@ -4,13 +4,13 @@
 //
 //  Created by ___liangdahong on 16/8/17.
 //  Copyright © 2016年 梁大红. All rights reserved.
-//
+//  https://github.com/asiosldh/PullBack
 
 /// false: 关闭 true: 打开
 
 let kopenPullBack = true
-
 import UIKit
+
 extension UIViewController {
     public override class func initialize() {
 

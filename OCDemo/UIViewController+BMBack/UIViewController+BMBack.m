@@ -3,10 +3,9 @@
 //
 //  Created by ___liangdahong on 16/8/16.
 //  Copyright © 2016年 梁大红. All rights reserved.
-//
+//  https://github.com/asiosldh/PullBack
 
 // NO: 关闭 YES: 打开
-
 #define kopenPullBack YES
 
 #import <UIKit/UIKit.h>
@@ -15,7 +14,6 @@
 @implementation UIViewController (BMBack)
 
 + (void)load {
-    
     if (kopenPullBack) {
         Method m1 = class_getInstanceMethod([self class], @selector(viewDidLoad));
         Method m2 = class_getInstanceMethod([self class], @selector(bm_viewDidLoad));
