@@ -2,8 +2,8 @@
 <blockquote>
 <p>全屏侧滑返回功能 (oc&amp;swift版)</p>
 <ul>
-<li>oc使用：UIViewController+BMBack.m 拖入项目即可以</li>
-<li>swift使用：UIViewController+PullBack.swift 拖入项目即可以</li>
+<li>oc使用：UIViewController+BMBack.m 拖入项目即可</li>
+<li>swift使用：UIViewController+PullBack.swift 拖入项目即可</li>
 </ul>
 </blockquote>
 <h2>效果图</h2>
