@@ -1,6 +1,10 @@
 <h1><a id="user-content-pullback" class="anchor" href="https://github.com/asiosldh/PullBack#pullback"></a>PullBack</h1>
 <blockquote>
 <p>全屏侧滑返回功能 (oc&amp;swift版)</p>
+<ul>
+<li>oc使用：UIViewController+BMBack.m 拖入项目即可以</li>
+<li>swift使用：UIViewController+PullBack.swift 拖入项目即可以</li>
+</ul>
 </blockquote>
 <h2>效果图</h2>
 <p><img src="http://images2015.cnblogs.com/blog/724434/201608/724434-20160817113606296-1239188131.gif" alt="" /></p>
