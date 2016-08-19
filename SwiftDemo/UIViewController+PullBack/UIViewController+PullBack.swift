@@ -12,13 +12,11 @@ let kopenPullBack = true
 import UIKit
 
 extension UINavigationController {
+    
     public override class func initialize() {
-        
+
         struct Static {
             static var token: dispatch_once_t = 0
-        }
-        if self !== UINavigationController.self {
-            return
         }
         dispatch_once(&Static.token) {
             if kopenPullBack {
@@ -38,11 +36,10 @@ extension UINavigationController {
     func bm_viewDidLoad() -> () {
         let tempGes = self.interactivePopGestureRecognizer
         tempGes?.enabled = false
-        let arr = tempGes?.valueForKey("_targets")
-        let tar = arr?.firstObject
-        let _targets = tar!!.valueForKey("target");
+        let _targets = tempGes?.valueForKey("_targets")
+        let _target = _targets?.firstObject!!.valueForKey("target")
         let sel = NSSelectorFromString("handleNavigationTransition:")
-        let pan = UIPanGestureRecognizer.init(target: _targets!, action: sel)
+        let pan = UIPanGestureRecognizer.init(target: _target!, action: sel)
         tempGes!.view?.addGestureRecognizer(pan)
     }
 }
