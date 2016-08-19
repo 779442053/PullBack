@@ -57,7 +57,7 @@
         Method m2 </span>= class_getInstanceMethod([self <span style="color: #0000ff;">class</span><span style="color: #000000;">], @selector(bm_viewDidLoad));
         
         </span><span style="color: #008000;">/*</span><span style="color: #008000;">!
-        分析 </span><span style="color: #008000; text-decoration: underline;">http://blog.leichunfeng.com/blog/2015/06/14/objective-c-method-swizzling-best-practice/</span>
+        分析 </span><a href="http://blog.leichunfeng.com/blog/2015/06/14/objective-c-method-swizzling-best-practice/" target="_blank"><span style="color: #008000; text-decoration: underline;">http://blog.leichunfeng.com/blog/2015/06/14/objective-c-method-swizzling-best-practice/</span></a>
          <span style="color: #008000;">*/</span><span style="color: #000000;">
         BOOL sel </span>=<span style="color: #000000;"> class_addMethod(self, @selector(viewDidLoad), method_getImplementation(m2), method_getTypeEncoding(m2));
         </span><span style="color: #0000ff;">if</span> (!<span style="color: #000000;">sel) {
